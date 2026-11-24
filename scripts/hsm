@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Convenience wrapper: hsm <mode> [args]  →  python3 inventory.py <mode> [args]
+set -euo pipefail
+src="${BASH_SOURCE[0]}"
+while [ -L "$src" ]; do
+  dir="$(cd -P "$(dirname "$src")" && pwd)"
+  src="$(readlink "$src")"
+  [[ "$src" != /* ]] && src="$dir/$src"
+done
+exec python3 "$(cd -P "$(dirname "$src")" && pwd)/inventory.py" "$@"

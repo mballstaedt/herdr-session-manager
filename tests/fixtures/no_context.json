@@ -1,0 +1,100 @@
+{
+ "env": {},
+ "current_pane": "w3:p1",
+ "workspaces": [
+  {
+   "workspace_id": "w3",
+   "label": "solo",
+   "number": 1,
+   "pane_count": 1,
+   "tab_count": 1,
+   "focused": true,
+   "active_tab_id": "w3:t1",
+   "agent_status": "idle"
+  }
+ ],
+ "tabs": [
+  {
+   "tab_id": "w3:t1",
+   "workspace_id": "w3",
+   "label": "Solo task",
+   "number": 1,
+   "pane_count": 1,
+   "focused": true,
+   "agent_status": "idle"
+  }
+ ],
+ "panes": [
+  {
+   "pane_id": "w3:p1",
+   "tab_id": "w3:t1",
+   "workspace_id": "w3",
+   "terminal_id": "term_w30001",
+   "terminal_title": "Solo task",
+   "terminal_title_stripped": "Solo task",
+   "cwd": "/work/firm/solo",
+   "foreground_cwd": "/work/firm/solo",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w3-0001-4000-8000-000000000001"
+   }
+  }
+ ],
+ "agents": [
+  {
+   "pane_id": "w3:p1",
+   "tab_id": "w3:t1",
+   "workspace_id": "w3",
+   "terminal_id": "term_w30001",
+   "cwd": "/work/firm/solo",
+   "foreground_cwd": "/work/firm/solo",
+   "focused": false,
+   "terminal_title": "Solo task",
+   "terminal_title_stripped": "Solo task",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w3-0001-4000-8000-000000000001"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "solo",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  }
+ ],
+ "process_info": {
+  "term_w30001": {
+   "shell_pid": 1010,
+   "foreground_process_group_id": 1011,
+   "foreground_processes": [
+    {
+     "pid": 1015,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1011,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  }
+ },
+ "reads": {
+  "term_w30001": "\u23fa Opened the PR and pushed the branch. CI is green on all\n  required checks.\n\n\u273b Cogitated for 1m 12s \u00b7 done 8:40 AM\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\u276f\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  \u23f5\u23f5 auto mode on (shift+tab to cycle)"
+ }
+}

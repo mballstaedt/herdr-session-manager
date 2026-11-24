@@ -1,0 +1,81 @@
+#:schema https://yazi-rs.github.io/schemas/yazi.json
+#
+# herdr-session-manager: Yazi profile for browsing a project inside a Herdr pane.
+# Written for Yazi 26.9.1 (Homebrew). Self-contained: launch with
+#
+#   YAZI_CONFIG_HOME=<this dir> yazi <project-root>
+#
+# It overlays Yazi's built-in preset; it does not read or change ~/.config/yazi.
+#
+# Sensitive-file guard
+# --------------------
+# Every rule below that runs "noop" is PREPENDED, so it is matched before any preset
+# previewer/preloader/spotter. Matching notes for 26.9.1 (yazi-config/src/pattern.rs):
+#   - `url` globs are matched against the full path; a glob with no "/" lets `*` cross
+#     directories, so "*secret*" would also hit everything under a "secrets/" folder.
+#     All patterns therefore start with "**/" (which turns on literal separators), so
+#     they match the file NAME (or the trailing path segments shown) only.
+#   - Matching is case-insensitive by default (".ENV" is caught too).
+#   - Patterns without a trailing "/" match files only; directory listings still preview
+#     (names only, never contents).
+# Over-blocking is intentional: ".env.example", "id_rsa.pub", "tokenizer.py" and the like
+# also lose their preview. Opening them (Enter / right-click) still works.
+# Files INSIDE a directory whose name contains "secret" or "credential" are blocked too.
+# Keep the three [plugin] prepend_* lists identical when editing.
+
+[mgr]
+show_hidden  = true
+show_symlink = true
+# 26.9.1 accepts: click, scroll, touch, move, drag. "move" is left off so merely
+# moving the pointer over the list does not change the hovered file.
+mouse_events = [ "click", "scroll", "touch", "drag" ]
+
+[opener]
+# Replaces the preset "edit" opener. The VS Code CLI is not on PATH, so it is called by
+# absolute path; the double quotes protect the spaces. orphan = true detaches it so Yazi
+# stays usable. $EDITOR stays available as a second choice in "Open with" (O).
+edit = [
+	{ run = '"/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" %s', orphan = true, desc = "VS Code", for = "macos" },
+	{ run = "${EDITOR:-vi} %s", block = true, desc = "$EDITOR", for = "unix" },
+]
+
+[open]
+# Preset rules already send folder/*, text/*, application/json, inode/empty to "edit".
+prepend_rules = [
+	# Key/cert containers would otherwise fall through to macOS `open` (Keychain import).
+	{ url = "**/*.{pem,key,p12,pfx,keystore,jks,crt,cer}", use = [ "edit", "reveal" ] },
+	# Config/code types that `file` does not report as text/*.
+	{ mime = "application/{toml,yaml,x-yaml,xml,x-sh,x-shellscript,sql,graphql,x-ndjson}", use = [ "edit", "reveal" ] },
+]
+
+[plugin]
+# Yazi 26.9.1 caps preloaders at 16 in total and the preset already uses 8, so the guard
+# is packed into 3 rules per list. Adding more prepend_preloaders than 8 makes Yazi reject
+# this file and offer to continue with PRESET settings, which drops the guard entirely.
+# Validate after every edit: YAZI_CONFIG_HOME=<this dir> ya env  (needs a TTY).
+prepend_previewers = [
+	# Sensitive file names
+	{ url = "**/{.env,.env.*,*.env,.envrc,*.pem,*.key,*.p12,*.pfx,*.keystore,*.jks,id_rsa*,id_ed25519*,id_ecdsa*,*credentials*,*secret*,*token*,.npmrc,.pypirc,.netrc,.git-credentials,*.tfvars,*.tfvars.*,*.tfstate,*.tfstate.*,service-account*.json,kubeconfig*}", run = "noop" },
+	# Well-known credential paths
+	{ url = "**/{.aws/credentials,.aws/config,.kube/config,.docker/config.json}", run = "noop" },
+	# Anything inside a directory named like *secret* or *credential*
+	{ url = "**/*{secret,credential}*/**", run = "noop" },
+]
+
+prepend_preloaders = [
+	# Sensitive file names
+	{ url = "**/{.env,.env.*,*.env,.envrc,*.pem,*.key,*.p12,*.pfx,*.keystore,*.jks,id_rsa*,id_ed25519*,id_ecdsa*,*credentials*,*secret*,*token*,.npmrc,.pypirc,.netrc,.git-credentials,*.tfvars,*.tfvars.*,*.tfstate,*.tfstate.*,service-account*.json,kubeconfig*}", run = "noop" },
+	# Well-known credential paths
+	{ url = "**/{.aws/credentials,.aws/config,.kube/config,.docker/config.json}", run = "noop" },
+	# Anything inside a directory named like *secret* or *credential*
+	{ url = "**/*{secret,credential}*/**", run = "noop" },
+]
+
+prepend_spotters = [
+	# Sensitive file names
+	{ url = "**/{.env,.env.*,*.env,.envrc,*.pem,*.key,*.p12,*.pfx,*.keystore,*.jks,id_rsa*,id_ed25519*,id_ecdsa*,*credentials*,*secret*,*token*,.npmrc,.pypirc,.netrc,.git-credentials,*.tfvars,*.tfvars.*,*.tfstate,*.tfstate.*,service-account*.json,kubeconfig*}", run = "noop" },
+	# Well-known credential paths
+	{ url = "**/{.aws/credentials,.aws/config,.kube/config,.docker/config.json}", run = "noop" },
+	# Anything inside a directory named like *secret* or *credential*
+	{ url = "**/*{secret,credential}*/**", run = "noop" },
+]

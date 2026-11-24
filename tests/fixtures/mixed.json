@@ -1,0 +1,664 @@
+{
+ "env": {
+  "HERDR_ENV": "1",
+  "HERDR_SOCKET_PATH": "/fixture/herdr.sock"
+ },
+ "current_pane": "w1:p9",
+ "workspaces": [
+  {
+   "workspace_id": "w1",
+   "label": "billing",
+   "number": 1,
+   "pane_count": 9,
+   "tab_count": 3,
+   "focused": true,
+   "active_tab_id": "w1:t1",
+   "agent_status": "idle"
+  },
+  {
+   "workspace_id": "w2",
+   "label": "personal",
+   "number": 2,
+   "pane_count": 1,
+   "tab_count": 1,
+   "focused": false,
+   "active_tab_id": "w2:t1",
+   "agent_status": "idle"
+  }
+ ],
+ "tabs": [
+  {
+   "tab_id": "w1:t1",
+   "workspace_id": "w1",
+   "label": "Agents",
+   "number": 1,
+   "pane_count": 5,
+   "focused": true,
+   "agent_status": "idle"
+  },
+  {
+   "tab_id": "w1:t2",
+   "workspace_id": "w1",
+   "label": "2",
+   "number": 2,
+   "pane_count": 2,
+   "focused": false,
+   "agent_status": "idle"
+  },
+  {
+   "tab_id": "w1:t3",
+   "workspace_id": "w1",
+   "label": "misc",
+   "number": 3,
+   "pane_count": 2,
+   "focused": false,
+   "agent_status": "idle"
+  },
+  {
+   "tab_id": "w2:t1",
+   "workspace_id": "w2",
+   "label": "Notes",
+   "number": 1,
+   "pane_count": 1,
+   "focused": false,
+   "agent_status": "idle"
+  }
+ ],
+ "panes": [
+  {
+   "pane_id": "w1:p1",
+   "tab_id": "w1:t1",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10001",
+   "terminal_title": "Claude Code",
+   "terminal_title_stripped": "Claude Code",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "working",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0001-4000-8000-000000000001"
+   }
+  },
+  {
+   "pane_id": "w1:p2",
+   "tab_id": "w1:t1",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10002",
+   "terminal_title": "",
+   "terminal_title_stripped": "",
+   "cwd": "/work/employer/billing",
+   "foreground_cwd": "/work/employer/billing",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "codex",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "codex",
+    "kind": "id",
+    "source": "herdr:codex",
+    "value": "0000w1-0002-4000-8000-000000000002"
+   }
+  },
+  {
+   "pane_id": "w1:p3",
+   "tab_id": "w1:t1",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10003",
+   "terminal_title": "billing",
+   "terminal_title_stripped": "billing",
+   "cwd": "/work/employer/billing",
+   "foreground_cwd": "/work/employer/billing",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "codex",
+   "agent_status": "done",
+   "agent_session": {
+    "agent": "codex",
+    "kind": "id",
+    "source": "herdr:codex",
+    "value": "0000w1-0003-4000-8000-000000000003"
+   }
+  },
+  {
+   "pane_id": "w1:p4",
+   "tab_id": "w1:t1",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10004",
+   "terminal_title": "Fix webhook retries and also refactor the whole notification pipeline plus docs",
+   "terminal_title_stripped": "Fix webhook retries and also refactor the whole notification pipeline plus docs",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "blocked",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0004-4000-8000-000000000004"
+   }
+  },
+  {
+   "pane_id": "w1:p5",
+   "tab_id": "w1:t2",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10005",
+   "terminal_title": "API",
+   "terminal_title_stripped": "API",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "unknown",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0005-4000-8000-000000000005"
+   }
+  },
+  {
+   "pane_id": "w1:p6",
+   "tab_id": "w1:t2",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10006",
+   "terminal_title": "Release notes",
+   "terminal_title_stripped": "Release notes",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0006-4000-8000-000000000006"
+   }
+  },
+  {
+   "pane_id": "w1:p7",
+   "tab_id": "w1:t3",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10007",
+   "terminal_title": "Release notes",
+   "terminal_title_stripped": "Release notes",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0007-4000-8000-000000000007"
+   }
+  },
+  {
+   "pane_id": "w1:p8",
+   "tab_id": "w1:t3",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10008",
+   "terminal_title": "",
+   "terminal_title_stripped": "",
+   "cwd": "/work/firm/scratch",
+   "foreground_cwd": "/work/firm/scratch",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent_status": "unknown"
+  },
+  {
+   "pane_id": "w1:p9",
+   "tab_id": "w1:t1",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10009",
+   "terminal_title": "Organizer",
+   "terminal_title_stripped": "Organizer",
+   "cwd": "/work/firm/shared",
+   "foreground_cwd": "/work/firm/shared",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0009-4000-8000-000000000009"
+   }
+  },
+  {
+   "pane_id": "w2:p1",
+   "tab_id": "w2:t1",
+   "workspace_id": "w2",
+   "terminal_id": "term_w20001",
+   "terminal_title": "Personal notes",
+   "terminal_title_stripped": "Personal notes",
+   "cwd": "/work/firm/notes",
+   "foreground_cwd": "/work/firm/notes",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w2-0001-4000-8000-000000000001"
+   }
+  }
+ ],
+ "agents": [
+  {
+   "pane_id": "w1:p1",
+   "tab_id": "w1:t1",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10001",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "Claude Code",
+   "terminal_title_stripped": "Claude Code",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0001-4000-8000-000000000001"
+   },
+   "agent_status": "working",
+   "agent": "claude",
+   "name": "lead",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w1:p2",
+   "tab_id": "w1:t1",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10002",
+   "cwd": "/work/employer/billing",
+   "foreground_cwd": "/work/employer/billing",
+   "focused": false,
+   "terminal_title": "",
+   "terminal_title_stripped": "",
+   "agent_session": {
+    "agent": "codex",
+    "kind": "id",
+    "source": "herdr:codex",
+    "value": "0000w1-0002-4000-8000-000000000002"
+   },
+   "agent_status": "idle",
+   "agent": "codex",
+   "name": "codex-a",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w1:p4",
+   "tab_id": "w1:t1",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10004",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "Fix webhook retries and also refactor the whole notification pipeline plus docs",
+   "terminal_title_stripped": "Fix webhook retries and also refactor the whole notification pipeline plus docs",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0004-4000-8000-000000000004"
+   },
+   "agent_status": "blocked",
+   "agent": "claude",
+   "name": "webhooks",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w1:p5",
+   "tab_id": "w1:t2",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10005",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "API",
+   "terminal_title_stripped": "API",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0005-4000-8000-000000000005"
+   },
+   "agent_status": "unknown",
+   "agent": "claude",
+   "name": "api",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w1:p6",
+   "tab_id": "w1:t2",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10006",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "Release notes",
+   "terminal_title_stripped": "Release notes",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0006-4000-8000-000000000006"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "notes",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w1:p7",
+   "tab_id": "w1:t3",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10007",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "Release notes",
+   "terminal_title_stripped": "Release notes",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0007-4000-8000-000000000007"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "notes2",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w1:p9",
+   "tab_id": "w1:t1",
+   "workspace_id": "w1",
+   "terminal_id": "term_w10009",
+   "cwd": "/work/firm/shared",
+   "foreground_cwd": "/work/firm/shared",
+   "focused": false,
+   "terminal_title": "Organizer",
+   "terminal_title_stripped": "Organizer",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w1-0009-4000-8000-000000000009"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "organizer",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w2:p1",
+   "tab_id": "w2:t1",
+   "workspace_id": "w2",
+   "terminal_id": "term_w20001",
+   "cwd": "/work/firm/notes",
+   "foreground_cwd": "/work/firm/notes",
+   "focused": false,
+   "terminal_title": "Personal notes",
+   "terminal_title_stripped": "Personal notes",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w2-0001-4000-8000-000000000001"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "other",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  }
+ ],
+ "process_info": {
+  "term_w10001": {
+   "shell_pid": 1010,
+   "foreground_process_group_id": 1011,
+   "foreground_processes": [
+    {
+     "pid": 1015,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1011,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w10002": {
+   "shell_pid": 1020,
+   "foreground_process_group_id": 1021,
+   "foreground_processes": [
+    {
+     "pid": 1025,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1021,
+     "name": "2.1.316",
+     "argv0": "codex"
+    }
+   ]
+  },
+  "term_w10003": {
+   "shell_pid": 1030,
+   "foreground_process_group_id": 1031,
+   "foreground_processes": [
+    {
+     "pid": 1035,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1031,
+     "name": "2.1.316",
+     "argv0": "codex"
+    }
+   ]
+  },
+  "term_w10004": {
+   "shell_pid": 1040,
+   "foreground_process_group_id": 1041,
+   "foreground_processes": [
+    {
+     "pid": 1045,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1041,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w10005": {
+   "shell_pid": 1050,
+   "foreground_process_group_id": 1051,
+   "foreground_processes": [
+    {
+     "pid": 1055,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1051,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w10006": {
+   "shell_pid": 1060,
+   "foreground_process_group_id": 1061,
+   "foreground_processes": [
+    {
+     "pid": 1065,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1061,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w10007": {
+   "shell_pid": 1070,
+   "foreground_process_group_id": 1071,
+   "foreground_processes": [
+    {
+     "pid": 1075,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1071,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w10008": {
+   "shell_pid": 1080,
+   "foreground_process_group_id": 1080,
+   "foreground_processes": [
+    {
+     "pid": 1080,
+     "name": "zsh",
+     "argv0": "-zsh"
+    }
+   ]
+  },
+  "term_w10009": {
+   "shell_pid": 1090,
+   "foreground_process_group_id": 1091,
+   "foreground_processes": [
+    {
+     "pid": 1095,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1091,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w20001": {
+   "shell_pid": 1010,
+   "foreground_process_group_id": 1011,
+   "foreground_processes": [
+    {
+     "pid": 1015,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1011,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  }
+ },
+ "reads": {
+  "term_w10001": "⠋ Thinking…",
+  "term_w10002": "⏺ All tasks are complete. Summary: 3 files updated,\n  tests pass (42/42), PR #88 is ready for review.\n─────────────────────────────────────────\n❯ ",
+  "term_w10003": "⏺ Running the export again…\n  API Error: 529 overloaded_error · Retrying in 30s\n  API Error: Request timed out\n─────────────────────────────────────────\n❯ ",
+  "term_w10004": "⏺ The migration plan is ready. Two options: apply now\n  during business hours, or wait for the 6pm window.\n  Want me to apply it now or wait?\n─────────────────────────────────────────\n❯\n─────────────────────────────────────────",
+  "term_w10005": "⏺ Set the variable: export STRIPE_API_KEY=sk_live_XXXXdummyXXXX\n  and the token ghp_DUMMYdummyDUMMYdummy00 is configured.\n❯ ",
+  "term_w10006": "⏺ Opened the PR and pushed the branch. CI is green on all\n  required checks.\n\n✻ Cogitated for 1m 12s · done 8:40 AM\n─────────────────────────────────────────\n❯\n─────────────────────────────────────────\n  ⏵⏵ auto mode on (shift+tab to cycle)",
+  "term_w10007": "⏺ Opened the PR and pushed the branch. CI is green on all\n  required checks.\n\n✻ Cogitated for 1m 12s · done 8:40 AM\n─────────────────────────────────────────\n❯\n─────────────────────────────────────────\n  ⏵⏵ auto mode on (shift+tab to cycle)"
+ }
+}

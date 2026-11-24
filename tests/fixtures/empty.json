@@ -1,0 +1,111 @@
+{
+ "env": {
+  "HERDR_ENV": "1",
+  "HERDR_SOCKET_PATH": "/fixture/herdr.sock"
+ },
+ "current_pane": "w4:p1",
+ "workspaces": [
+  {
+   "workspace_id": "w4",
+   "label": "home",
+   "number": 1,
+   "pane_count": 1,
+   "tab_count": 1,
+   "focused": true,
+   "active_tab_id": "w4:t1",
+   "agent_status": "idle"
+  },
+  {
+   "workspace_id": "w5",
+   "label": "empty",
+   "number": 2,
+   "pane_count": 0,
+   "tab_count": 0,
+   "focused": false,
+   "active_tab_id": "w5:t1",
+   "agent_status": "idle"
+  }
+ ],
+ "tabs": [
+  {
+   "tab_id": "w4:t1",
+   "workspace_id": "w4",
+   "label": "Home",
+   "number": 1,
+   "pane_count": 1,
+   "focused": true,
+   "agent_status": "idle"
+  }
+ ],
+ "panes": [
+  {
+   "pane_id": "w4:p1",
+   "tab_id": "w4:t1",
+   "workspace_id": "w4",
+   "terminal_id": "term_w40001",
+   "terminal_title": "Home",
+   "terminal_title_stripped": "Home",
+   "cwd": "/work/firm/home",
+   "foreground_cwd": "/work/firm/home",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w4-0001-4000-8000-000000000001"
+   }
+  }
+ ],
+ "agents": [
+  {
+   "pane_id": "w4:p1",
+   "tab_id": "w4:t1",
+   "workspace_id": "w4",
+   "terminal_id": "term_w40001",
+   "cwd": "/work/firm/home",
+   "foreground_cwd": "/work/firm/home",
+   "focused": false,
+   "terminal_title": "Home",
+   "terminal_title_stripped": "Home",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w4-0001-4000-8000-000000000001"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "home",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  }
+ ],
+ "process_info": {
+  "term_w40001": {
+   "shell_pid": 1010,
+   "foreground_process_group_id": 1011,
+   "foreground_processes": [
+    {
+     "pid": 1015,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1011,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  }
+ },
+ "reads": {}
+}

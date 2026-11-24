@@ -1,0 +1,720 @@
+{
+ "env": {
+  "HERDR_ENV": "1",
+  "HERDR_SOCKET_PATH": "/fixture/herdr.sock"
+ },
+ "current_pane": "w6:p10",
+ "workspaces": [
+  {
+   "workspace_id": "w6",
+   "label": "platform",
+   "number": 1,
+   "pane_count": 9,
+   "tab_count": 3,
+   "focused": true,
+   "active_tab_id": "w6:t1",
+   "agent_status": "idle"
+  },
+  {
+   "workspace_id": "w7",
+   "label": "websites",
+   "number": 2,
+   "pane_count": 1,
+   "tab_count": 1,
+   "focused": false,
+   "active_tab_id": "w7:t1",
+   "agent_status": "idle"
+  }
+ ],
+ "tabs": [
+  {
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "label": "1",
+   "number": 1,
+   "pane_count": 7,
+   "focused": true,
+   "agent_status": "idle"
+  },
+  {
+   "tab_id": "w6:t2",
+   "workspace_id": "w6",
+   "label": "data",
+   "number": 2,
+   "pane_count": 1,
+   "focused": false,
+   "agent_status": "blocked"
+  },
+  {
+   "tab_id": "w6:t3",
+   "workspace_id": "w6",
+   "label": "Workspace organizer",
+   "number": 3,
+   "pane_count": 1,
+   "focused": false,
+   "agent_status": "idle"
+  },
+  {
+   "tab_id": "w7:t1",
+   "workspace_id": "w7",
+   "label": "site",
+   "number": 1,
+   "pane_count": 1,
+   "focused": false,
+   "agent_status": "idle"
+  }
+ ],
+ "panes": [
+  {
+   "pane_id": "w6:p1",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60001",
+   "terminal_title": "Database migration review",
+   "terminal_title_stripped": "Database migration review",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0001-4000-8000-000000000001"
+   }
+  },
+  {
+   "pane_id": "w6:p2",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60002",
+   "terminal_title": "Herdr session manager skill",
+   "terminal_title_stripped": "Herdr session manager skill",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0002-4000-8000-000000000002"
+   }
+  },
+  {
+   "pane_id": "w6:p3",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60003",
+   "terminal_title": "Logging cleanup",
+   "terminal_title_stripped": "Logging cleanup",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": true,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0003-4000-8000-000000000003"
+   }
+  },
+  {
+   "pane_id": "w6:p4",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60004",
+   "terminal_title": "Service health check",
+   "terminal_title_stripped": "Service health check",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0004-4000-8000-000000000004"
+   }
+  },
+  {
+   "pane_id": "w6:p5",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60005",
+   "terminal_title": "Feature PR review",
+   "terminal_title_stripped": "Feature PR review",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0005-4000-8000-000000000005"
+   }
+  },
+  {
+   "pane_id": "w6:p6",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60006",
+   "terminal_title": "[Untracked] Backlog audit",
+   "terminal_title_stripped": "[Untracked] Backlog audit",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0006-4000-8000-000000000006"
+   }
+  },
+  {
+   "pane_id": "w6:p7",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60007",
+   "terminal_title": "Dashboard PR QA",
+   "terminal_title_stripped": "Dashboard PR QA",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0007-4000-8000-000000000007"
+   }
+  },
+  {
+   "pane_id": "w6:p9",
+   "tab_id": "w6:t2",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60009",
+   "terminal_title": "Data access request",
+   "terminal_title_stripped": "Data access request",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "blocked",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0009-4000-8000-000000000009"
+   }
+  },
+  {
+   "pane_id": "w6:p10",
+   "tab_id": "w6:t3",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60010",
+   "terminal_title": "Workspace organizer",
+   "terminal_title_stripped": "Workspace organizer",
+   "cwd": "/work/firm/shared",
+   "foreground_cwd": "/work/firm/shared",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0010-4000-8000-000000000010"
+   }
+  },
+  {
+   "pane_id": "w7:p1",
+   "tab_id": "w7:t1",
+   "workspace_id": "w7",
+   "terminal_id": "term_w70001",
+   "terminal_title": "Website deploy",
+   "terminal_title_stripped": "Website deploy",
+   "cwd": "/work/employer/site",
+   "foreground_cwd": "/work/employer/site",
+   "focused": false,
+   "revision": 3,
+   "scroll": {
+    "max_offset_from_bottom": 0,
+    "offset_from_bottom": 0,
+    "viewport_rows": 26
+   },
+   "agent": "claude",
+   "agent_status": "idle",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w7-0001-4000-8000-000000000001"
+   }
+  }
+ ],
+ "agents": [
+  {
+   "pane_id": "w6:p1",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60001",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "Database migration review",
+   "terminal_title_stripped": "Database migration review",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0001-4000-8000-000000000001"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "db",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w6:p2",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60002",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "Herdr session manager skill",
+   "terminal_title_stripped": "Herdr session manager skill",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0002-4000-8000-000000000002"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "hsm",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w6:p3",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60003",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": true,
+   "terminal_title": "Logging cleanup",
+   "terminal_title_stripped": "Logging cleanup",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0003-4000-8000-000000000003"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "alerting",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w6:p4",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60004",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "Service health check",
+   "terminal_title_stripped": "Service health check",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0004-4000-8000-000000000004"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "sync",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w6:p5",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60005",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "Feature PR review",
+   "terminal_title_stripped": "Feature PR review",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0005-4000-8000-000000000005"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "relay",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w6:p6",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60006",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "[Untracked] Backlog audit",
+   "terminal_title_stripped": "[Untracked] Backlog audit",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0006-4000-8000-000000000006"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "audit",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w6:p7",
+   "tab_id": "w6:t1",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60007",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "Dashboard PR QA",
+   "terminal_title_stripped": "Dashboard PR QA",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0007-4000-8000-000000000007"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "partner-qa",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w6:p9",
+   "tab_id": "w6:t2",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60009",
+   "cwd": "/work/employer/project-a",
+   "foreground_cwd": "/work/employer/project-a",
+   "focused": false,
+   "terminal_title": "Data access request",
+   "terminal_title_stripped": "Data access request",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0009-4000-8000-000000000009"
+   },
+   "agent_status": "blocked",
+   "agent": "claude",
+   "name": "warehouse",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w6:p10",
+   "tab_id": "w6:t3",
+   "workspace_id": "w6",
+   "terminal_id": "term_w60010",
+   "cwd": "/work/firm/shared",
+   "foreground_cwd": "/work/firm/shared",
+   "focused": false,
+   "terminal_title": "Workspace organizer",
+   "terminal_title_stripped": "Workspace organizer",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w6-0010-4000-8000-000000000010"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "organizer",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  },
+  {
+   "pane_id": "w7:p1",
+   "tab_id": "w7:t1",
+   "workspace_id": "w7",
+   "terminal_id": "term_w70001",
+   "cwd": "/work/employer/site",
+   "foreground_cwd": "/work/employer/site",
+   "focused": false,
+   "terminal_title": "Website deploy",
+   "terminal_title_stripped": "Website deploy",
+   "agent_session": {
+    "agent": "claude",
+    "kind": "id",
+    "source": "herdr:claude",
+    "value": "0000w7-0001-4000-8000-000000000001"
+   },
+   "agent_status": "idle",
+   "agent": "claude",
+   "name": "deploy",
+   "interactive_ready": true,
+   "revision": 3,
+   "state_change_seq": 10
+  }
+ ],
+ "process_info": {
+  "term_w60001": {
+   "shell_pid": 1010,
+   "foreground_process_group_id": 1011,
+   "foreground_processes": [
+    {
+     "pid": 1015,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1011,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w60002": {
+   "shell_pid": 1020,
+   "foreground_process_group_id": 1021,
+   "foreground_processes": [
+    {
+     "pid": 1025,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1021,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w60003": {
+   "shell_pid": 1030,
+   "foreground_process_group_id": 1031,
+   "foreground_processes": [
+    {
+     "pid": 1035,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1031,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w60004": {
+   "shell_pid": 1040,
+   "foreground_process_group_id": 1041,
+   "foreground_processes": [
+    {
+     "pid": 1045,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1041,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w60005": {
+   "shell_pid": 1050,
+   "foreground_process_group_id": 1051,
+   "foreground_processes": [
+    {
+     "pid": 1055,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1051,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w60006": {
+   "shell_pid": 1060,
+   "foreground_process_group_id": 1061,
+   "foreground_processes": [
+    {
+     "pid": 1065,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1061,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w60007": {
+   "shell_pid": 1070,
+   "foreground_process_group_id": 1071,
+   "foreground_processes": [
+    {
+     "pid": 1075,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1071,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w60009": {
+   "shell_pid": 1090,
+   "foreground_process_group_id": 1091,
+   "foreground_processes": [
+    {
+     "pid": 1095,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1091,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w60010": {
+   "shell_pid": 1100,
+   "foreground_process_group_id": 1101,
+   "foreground_processes": [
+    {
+     "pid": 1105,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1101,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  },
+  "term_w70001": {
+   "shell_pid": 1010,
+   "foreground_process_group_id": 1011,
+   "foreground_processes": [
+    {
+     "pid": 1015,
+     "name": "node",
+     "argv0": "mcp-server"
+    },
+    {
+     "pid": 1011,
+     "name": "2.1.316",
+     "argv0": "claude"
+    }
+   ]
+  }
+ },
+ "reads": {
+  "term_w60001": "⏺ Opened the PR and pushed the branch. CI is green on all\n  required checks.\n\n✻ Cogitated for 1m 12s · done 8:40 AM\n─────────────────────────────────────────\n❯\n─────────────────────────────────────────\n  ⏵⏵ auto mode on (shift+tab to cycle)",
+  "term_w60002": "• Working (12s • esc to interrupt)\n› Explain this codebase",
+  "term_w60003": "⏺ Opened the PR and pushed the branch. CI is green on all\n  required checks.\n\n✻ Cogitated for 1m 12s · done 8:40 AM\n─────────────────────────────────────────\n❯\n─────────────────────────────────────────\n  ⏵⏵ auto mode on (shift+tab to cycle)",
+  "term_w60005": "⏺ Opened the PR and pushed the branch. CI is green on all\n  required checks.\n\n✻ Cogitated for 1m 12s · done 8:40 AM\n─────────────────────────────────────────\n❯\n─────────────────────────────────────────\n  ⏵⏵ auto mode on (shift+tab to cycle)",
+  "term_w60009": "⏺ The migration plan is ready. Two options: apply now\n  during business hours, or wait for the 6pm window.\n  Want me to apply it now or wait?\n─────────────────────────────────────────\n❯\n─────────────────────────────────────────"
+ }
+}

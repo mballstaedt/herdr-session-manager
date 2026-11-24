@@ -1,0 +1,58 @@
+{
+  "provenance": {
+    "source": "Operator-provided herdr pane list, tab list and pane move receipts in this conversation on 2026-11-12",
+    "scope": "Reduced to selected pane; cwd sanitized; IDs retained for schema regression only, never live targets",
+    "live_acceptance": false
+  },
+  "pane_list": {
+    "id": "cli:pane:list",
+    "result": {
+      "panes": [{
+        "agent": "codex",
+        "agent_session": {"agent": "codex", "kind": "id", "source": "herdr:codex", "value": "00000000-0000-4000-8000-000000000001"},
+        "agent_status": "working",
+        "cwd": "/fixture/project",
+        "focused": false,
+        "foreground_cwd": "/fixture/project",
+        "pane_id": "w9:p2",
+        "revision": 2,
+        "scroll": {"max_offset_from_bottom": 0, "offset_from_bottom": 0, "viewport_rows": 48},
+        "tab_id": "w9:t2",
+        "terminal_id": "term_0000000000000a1",
+        "terminal_title": "Example agent task | project",
+        "terminal_title_stripped": "Example agent task | project",
+        "workspace_id": "w9"
+      }],
+      "type": "pane_list"
+    }
+  },
+  "move": {
+    "id": "cli:pane:move",
+    "result": {
+      "move_result": {
+        "changed": true,
+        "closed_tab_id": "w9:t2",
+        "created_tab": {"agent_status": "working", "focused": false, "label": "SHARED WORK STUDIO", "number": 1, "pane_count": 1, "tab_id": "wJ:t1", "workspace_id": "wJ"},
+        "created_workspace": {"active_tab_id": "wJ:t1", "agent_status": "working", "focused": false, "label": "SHARED WORK STUDIO", "number": 9, "pane_count": 1, "tab_count": 1, "workspace_id": "wJ"},
+        "focused_pane_id": "wJ:p1",
+        "pane": {
+          "agent": "codex",
+          "agent_session": {"agent": "codex", "kind": "id", "source": "herdr:codex", "value": "00000000-0000-4000-8000-000000000001"},
+          "agent_status": "working",
+          "cwd": "/fixture/project",
+          "focused": false,
+          "foreground_cwd": "/fixture/project",
+          "pane_id": "wJ:p1",
+          "revision": 2,
+          "tab_id": "wJ:t1",
+          "terminal_id": "term_0000000000000a1",
+          "workspace_id": "wJ"
+        },
+        "previous_pane_id": "w9:p2",
+        "previous_tab_id": "w9:t2",
+        "previous_workspace_id": "w9"
+      },
+      "type": "pane_move"
+    }
+  }
+}

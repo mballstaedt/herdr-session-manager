@@ -1998,6 +1998,12 @@ def build_parser() -> argparse.ArgumentParser:
     p = common(sub.add_parser("open-gui", help="open a pane's project + report GUI session capabilities"))
     p.add_argument("target")
     p.add_argument("--open-session", action="store_true", help="Operator-approved: hand the session to the VS Code extension (resumes it; refused for live Claude sessions)")
+    p = sub.add_parser("pre-restart",
+                       help="safety copy of Herdr's saved layout before a computer restart or Herdr shutdown (no Herdr context needed)")
+    p.add_argument("--session-dir", help="Herdr session directory (default: this session's, else the default session's)")
+    p.add_argument("--keep", type=int, default=10, help="safety copies to retain (default 10)")
+    p.add_argument("--no-live", action="store_true", help="skip live checks (busy agents, integration versions)")
+    p.add_argument("--json", action="store_true")
     p = sub.add_parser("purge", help="delete cached data (no Herdr context needed)")
     p.add_argument("--boundary"); p.add_argument("--everything", action="store_true"); p.add_argument("--json", action="store_true")
     return ap
@@ -2005,6 +2011,11 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv=None) -> int:
     a = build_parser().parse_args(argv)
+    if a.cmd == "pre-restart":
+        import prerestart
+        r = prerestart.backup(prerestart.resolve_session_dir(a.session_dir), keep=max(1, a.keep), live=not a.no_live)
+        _print(r, a.json, prerestart.render(r))
+        return EXIT_OK if r["ok"] else EXIT_ERR
     if a.cmd == "move-selected-space":
         from self_space import IdentityError
         from selected_space import move_selected

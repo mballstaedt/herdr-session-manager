@@ -145,6 +145,30 @@ to normalize them. Organize, rename, files and recovery also use ALL CAPS labels
 Original conversation titles and session IDs remain unchanged.
 
 
+## Before a restart or Herdr shutdown
+
+```bash
+python3 -B scripts/inventory.py pre-restart      # --json, --keep N, --session-dir DIR, --no-live
+```
+
+Say "restarting computer", "shutting down herdr", "rebooting" or similar. The skill copies
+Herdr's `session.json` (workspaces, tabs, panes, cwd, layout, agent session references) to
+`<session dir>/pre-restart-backups/session-<YYYYMMDDTHHMMSS>.json` (0600, sha256-verified,
+newest 10 kept), then warns about agents still mid-turn, a disabled
+`[session] resume_agents_on_restore`, or a Claude integration older than v6.
+
+Herdr already restores layout and resumes supported agent conversations on its own after a
+server restart (Herdr docs: *Session state and restore*). On macOS there is no shutdown
+hook, so the safety copy is the only point-in-time copy taken deliberately before you go.
+The command never stops Herdr. To roll back after a bad restore: `herdr server stop`,
+keep the current `session.json`, copy the chosen backup over it, run `herdr`.
+
+## Grid rendering
+
+`scripts/grid.py` renders a wrapped, box-drawing text table from a JSON spec on stdin
+(`{"columns": [["Header", width], ...], "rows": [...]}`). The skill uses it for
+multi-session reports so columns stay aligned. Standard library only; no other I/O.
+
 ## Recover by exact ID
 
 `$herdr-session-manager recent` lists the newest 30 local Codex and Claude sessions,

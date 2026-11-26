@@ -1,6 +1,6 @@
 ---
 name: herdr-session-manager
-description: Herdr session manager — organize Herdr panes into named tabs, list sessions, status, remaining work, review unclear or stalled sessions, restore sessions by date, repository or title, rename tabs in ALL CAPS, move an explicitly selected pane into its own space, watch, browse files (Yazi), open a pane's project in VS Code. Use for any request about Herdr sessions, panes, tabs or agents in this space.
+description: Herdr session manager — organize Herdr panes into named tabs, list sessions, status, remaining work, review unclear or stalled sessions, restore sessions by date, repository or title, take a safety copy of the layout before restarting the computer or shutting down/quitting Herdr, rename tabs in ALL CAPS, move an explicitly selected pane into its own space, watch, browse files (Yazi), open a pane's project in VS Code. Use for any request about Herdr sessions, panes, tabs or agents in this space.
 ---
 
 # Herdr Session Manager
@@ -31,6 +31,29 @@ For recent or missing sessions, read [references/recovery.md](references/recover
 - Do not restore all candidates automatically, close suspected duplicates, or send
   continuation prompts. Stop on uncertain admission and report partial receipts.
 
+## Before a restart or Herdr shutdown: safety copy
+
+Triggers: "restarting computer", "rebooting", "shutting down", "shutting down herdr",
+"quitting/stopping herdr", "logging off", "updating herdr", "before I restart". Run
+**first**, before anything else:
+
+    python3 -B <this-skill-dir>/scripts/inventory.py pre-restart
+
+(`--json`, `--keep N`, `--session-dir DIR`, `--no-live`). It needs no verified Herdr
+context and works even when the server is unreachable.
+
+- Copies `session.json` byte-for-byte to `<session dir>/pre-restart-backups/session-<stamp>.json`
+  (0600 in a 0700 dir), verifies the sha256, keeps the newest 10 of its own copies.
+  Herdr's `session-backups/` and `session-snapshots/` are never touched.
+- Reports workspaces/tabs/panes captured, agent sessions that will resume, and warnings:
+  agents other than the caller still `working`/`blocked` (their in-flight turn is lost),
+  `resume_agents_on_restore = false`, or a Claude integration older than v6.
+- Show the engine's report verbatim.
+- It never stops or restarts Herdr, closes panes or prompts agents. Stopping is the
+  Operator's action. After the restart they run `herdr`; layout, folders and supported
+  agent conversations come back. The report includes the manual rollback steps.
+- A failure (missing or corrupt `session.json`) changes nothing; relay the message.
+
 ## ALL CAPS tab titles
 
 Every tab label the manager creates or renames uses ALL CAPS; native conversation
@@ -40,7 +63,7 @@ normalizes labels in its target workspace while preserving meaningful wording.
 
 ## Before anything: verified context
 
-Except for read-only `recent`, unselected `restore` candidate listing, cache `purge`, the bounded `diagnose-context` mode, and the explicit self-only reconciliation and operator-selected workflows described below, the engine refuses to run unless `HERDR_ENV=1` is set and the Herdr server confirms the calling pane. It exits with code 3 when verification fails. Stop inventory/control and report the failure; use [context diagnostics and guided repair](references/context-diagnostics.md) to diagnose it safely. Never guess a server or pane, replace inherited identity variables, or bypass the guard. Diagnosis does not authorize recovery, permission escalation or session changes. The default scope is the caller's own workspace. Use `--all` only when the
+Except for read-only `recent`, unselected `restore` candidate listing, cache `purge`, the `pre-restart` safety copy, the bounded `diagnose-context` mode, and the explicit self-only reconciliation and operator-selected workflows described below, the engine refuses to run unless `HERDR_ENV=1` is set and the Herdr server confirms the calling pane. It exits with code 3 when verification fails. Stop inventory/control and report the failure; use [context diagnostics and guided repair](references/context-diagnostics.md) to diagnose it safely. Never guess a server or pane, replace inherited identity variables, or bypass the guard. Diagnosis does not authorize recovery, permission escalation or session changes. The default scope is the caller's own workspace. Use `--all` only when the
 Operator asks for every workspace (`list`, `status`, `remaining`, `watch`).
 
 ## Modes (the argument after `/herdr-session-manager`, `$herdr-session-manager`, or "use herdr-session-manager")
@@ -56,6 +79,7 @@ With no mode, run `status`. Map natural requests to modes:
 - "review stalled sessions" → `review` on the blocked or idle panes the Operator names,
   or `remaining`
 - "I already answered that" or "don't card p4 again" → `ack`
+- "restarting computer", "shutting down herdr", "rebooting", "quitting herdr" → `pre-restart`
 
 ### Level 1 — metadata only (fast; never reads terminal output or transcripts)
 
@@ -98,6 +122,11 @@ With no mode, run `status`. Map natural requests to modes:
 
 Formats are in `references/reporting-format.md`. Read that file before writing a review
 or a `remaining` report.
+
+When a report needs one table across many sessions (for example an update built from
+`remaining --all`), render it with `scripts/grid.py` rather than by hand: pipe a JSON
+spec `{"columns": [["Header", width], ...], "rows": [[...], ...]}` on stdin and show
+the box-drawing grid it prints. It only formats text; it reads nothing else.
 
 **review**
 - Targets resolve as pane ids (`p4`, `w6:p4`), agent names, titles, or **unique**
